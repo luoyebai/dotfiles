@@ -141,7 +141,3 @@ unset key
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 # add fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-source /opt/ros/humble/setup.zsh
-source ~/.ros_ws_setup.zsh
-#complete -o nospace -o default -F _python_argcomplete "ros2"

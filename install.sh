@@ -17,7 +17,7 @@ echo "==> Updating package list..."
 $SUDO apt update
 
 echo "==> Installing dependencies..."
-$SUDO apt install -y zsh wget curl git ripgrep
+$SUDO apt install -y zsh wget curl git ripgrep vim
 
 echo "==> Setting zsh as default shell..."
 ZSH_PATH=$(which zsh)
@@ -74,7 +74,6 @@ backup() {
   fi
 }
 
-
 for file in "${FILES[@]}"; do
   if [ -f "$DOTFILES_DIR/$file" ]; then
     backup "$TARGET_HOME/$file"
@@ -90,6 +89,8 @@ for dir in "${DIRS[@]}"; do
 done
 
 echo "Backup directory: $BACKUP_DIR"
+
+"$TARGET_HOME/.fzf/install"
 
 echo "==> Done."
 echo "Restart shell or run: exec zsh"
